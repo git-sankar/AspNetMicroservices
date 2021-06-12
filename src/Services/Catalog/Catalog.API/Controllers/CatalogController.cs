@@ -47,7 +47,7 @@ namespace Catalog.API.Controllers
             return Ok(product);
         }
 
-        [HttpGet("action/{Category}", Name = "GetProductByCategory")]
+        [HttpGet("[action]/{category}", Name = "GetProductByCategory")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         //[ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductByCategory(string category)
